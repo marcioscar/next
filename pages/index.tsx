@@ -1,6 +1,7 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import { NextPage } from 'next';
 
-export default function Home() {
+const IndexPage: NextPage = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <Head>
@@ -78,5 +79,7 @@ export default function Home() {
         </a>
       </footer>
     </div>
-  )
-}
+  );
+};
+
+export default IndexPage;
