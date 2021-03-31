@@ -2,14 +2,15 @@ import Head from 'next/head';
 import { NextPage } from 'next';
 import { signIn, signOut, useSession } from 'next-auth/client';
 
-const IndexPage: NextPage = () => {
+const AppPage: NextPage = () => {
   const [session, loading] = useSession();
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <Head>
-        <title>Brassaco Embalagens</title>
+        <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <h1>Bem Vindo a Brassaco</h1>
       {!session && (
         <div className="text-3xl">
           Not signed in <br />
@@ -37,16 +38,12 @@ const IndexPage: NextPage = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Grupo{' '}
-          <img
-            src="/logo_brass.svg"
-            alt="logo_brass Logo"
-            className="h-4 ml-2"
-          />
+          Powered by{' '}
+          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
         </a>
       </footer>
     </div>
   );
 };
 
-export default IndexPage;
+export default AppPage;
