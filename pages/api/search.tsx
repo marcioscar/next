@@ -8,6 +8,7 @@ interface ErrorResponseType {
 
 export default async (
   req: NextApiRequest,
+  // eslint-disable-next-line @typescript-eslint/ban-types
   res: NextApiResponse<ErrorResponseType | object[]>
 ): Promise<void> => {
   if (req.method === 'GET') {
